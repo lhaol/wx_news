@@ -1,0 +1,37 @@
+<!--index.wxml-->
+<view class="container">
+
+  <!-- 新闻页面头部 -->
+  <view class="header-wrapper">
+    <view class ="page-title">
+      <image class="title-img" src="/images/news.jpg"></image>
+      <view class="title-name">快读·咨询</view>
+    </view>
+    <view class ="type">
+      <!-- 新闻类型，值为gn、gj、cj、yl、js、ty和other其中之一 -->
+      <view wx:if="{{newsType=='gn'}}"class="newsType">国内</view>
+      <view wx:if="{{newsType=='gj'}}"class="newsType">国际</view>
+      <view wx:if="{{newsType=='cj'}}"class="newsType">财经</view>
+      <view wx:if="{{newsType=='yl'}}"class="newsType">娱乐</view>
+      <view wx:if="{{newsType=='js'}}"class="newsType">军事</view>
+      <view wx:if="{{newsType=='ty'}}"class="newsType">体育</view>
+      <view wx:if="{{newsType=='other'}}"class="newsType">其他</view>
+    </view>
+  </view>
+
+  <!-- 新闻头图 -->
+  <view class="head-news">
+    <image class="head-news-bg" src="" mode=""></image>
+    <!-- <view class="header-tips">热门</view> -->
+    <view class="news-title"></view>
+    <view class="news-source"></view>
+    <view class="news-time"></view>
+  </view>
+
+
+  <!-- 新闻内容列表 -->
+  <view class="">
+
+  </view>
+
+</view>

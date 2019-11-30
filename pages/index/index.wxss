@@ -1,0 +1,27 @@
+/**index.wxss**/
+.container{
+
+}
+
+.header-wrapper{
+
+}
+
+.page-title{
+  top:0;
+  left:0;
+  height:48rpx; 
+  display:flex;
+  align-items: center;
+  position: absolute;
+}
+
+.title-img{
+  width: 60rpx;
+  height: 60rpx;
+}
+
+.title-name{
+  height: 48rpx;
+  padding-left: 5rpx;
+}
