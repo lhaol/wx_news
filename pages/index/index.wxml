@@ -1,37 +1,55 @@
-<!--index.wxml-->
-<view class="container">
 
-  <!-- 新闻页面头部 -->
-  <view class="header-wrapper">
-    <view class ="page-title">
-      <image class="title-img" src="/images/news.jpg"></image>
-      <view class="title-name">快读·咨询</view>
-    </view>
-    <view class ="type">
-      <!-- 新闻类型，值为gn、gj、cj、yl、js、ty和other其中之一 -->
-      <view wx:if="{{newsType=='gn'}}"class="newsType">国内</view>
-      <view wx:if="{{newsType=='gj'}}"class="newsType">国际</view>
-      <view wx:if="{{newsType=='cj'}}"class="newsType">财经</view>
-      <view wx:if="{{newsType=='yl'}}"class="newsType">娱乐</view>
-      <view wx:if="{{newsType=='js'}}"class="newsType">军事</view>
-      <view wx:if="{{newsType=='ty'}}"class="newsType">体育</view>
-      <view wx:if="{{newsType=='other'}}"class="newsType">其他</view>
-    </view>
+<!-- 新闻页面头部 -->
+<view class ="page-title">
+  <image class="title-img" src="/images/news.jpg"></image>
+  <view class="title-name">快读·咨询</view>
+</view>
+
+<!-- 新闻页面主体 -->
+<view class="container"> 
+  <!-- 新闻类型，值为gn、gj、cj、yl、js、ty和other其中之一 --> 
+  <view class ="news-type">
+    <view class="type">国内</view>
+    <view class="type">国际</view>
+    <view class="type">财经</view>
+    <view class="type">娱乐</view>
+    <view class="type">军事</view>
+    <view class="type">体育</view>
+    <view class="type">其他</view>
   </view>
 
   <!-- 新闻头图 -->
   <view class="head-news">
-    <image class="head-news-bg" src="" mode=""></image>
+    <image class="head-news-bg" src="/images/xi.png" mode=""></image>
     <!-- <view class="header-tips">热门</view> -->
-    <view class="news-title"></view>
-    <view class="news-source"></view>
-    <view class="news-time"></view>
+    <view class="head-news-attribute">
+      <view class="head-news-title">我是一个标题</view>
+      <view class="head-news-source">新华社</view>
+      <view class="head-news-time">12-09</view>
+    </view>
   </view>
 
-
-  <!-- 新闻内容列表 -->
-  <view class="">
-
+  <!--新闻列表-->
+  <view class="news-list">
+    <view class="list-items">
+      <view class="sub-attr">
+        <view class="sub-title">新闻111</view>
+        <view class="sub-source">新华社</view>
+        <view class="sub-time">04：09</view>
+      </view>
+      <image class="sub-img" src="/images/xi.png"></image>
+    </view>
+    <view class="list-items">新闻222</view>
+    <view class="list-items">新闻333</view>
+    <view class="list-items">新闻444</view>
   </view>
+</view>
+
+
+
+
+<!-- 新闻内容列表 -->
+<view class="">
 
 </view>
+
