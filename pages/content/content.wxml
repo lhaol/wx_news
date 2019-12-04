@@ -1,0 +1,12 @@
+<!--Header-->
+<view class='content-news-title'>{{title}}</view>
+<view class='content-news-source'>{{source}}</view>
+<view class='content-news-time'>{{date}}</view>
+<view class='content-news-readCount'>阅读量：{{readCount}}</view>
+
+<!--Text-->
+<block wx:for="{{content}}" wx:key="key">
+  <image wx:if="{{item.type=='image'}}" src="{{item.src}}" class='content-news-image'/>
+  <view wx:if="{{item.type=='p'}}">{{item.text}}</view>
+  <text wx:if="{{item.type=='strong'}}" style="font-weight: bold">{{item.text}}</text>
+</block>

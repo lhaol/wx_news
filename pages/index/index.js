@@ -50,11 +50,13 @@ Page({
     let headImage = result[0].firstImage
     let headSource = result[0].source
     let headTime = result[0].date.slice(11, 16) //截取返回时间字符串中的11-16的字符作为时间显示 HH:MM
+    let headId = result[0].id
     this.setData({
       headTitle: headTitle,
       headImage: "https://" + headImage,
       headSource: headSource,
       headTime: headTime,
+      headId: headId,
     })
   },
   // 获取新闻列表中的数据
@@ -65,7 +67,8 @@ Page({
         listTitle: result[i].title,
         listSource: result[i].source ,
         listTime: result[i].date.slice(11,16),//截取返回时间字符串中的11-16的字符作为时间显示 HH:MM
-        listImage:"https://" + result[i].firstImage
+        listImage:"https://" + result[i].firstImage,
+        listID: result[i].id
       })
     }
     this.setData({
@@ -86,6 +89,13 @@ Page({
       type: event.currentTarget.dataset.type
     })
     this.getNews()
+  },
+  // 点击新闻跳转到Detail页面
+  onTapDetail(event) {
+    wx.navigateTo({
+      // url: "/pages/content/content"
+      url: "/pages/content/content?id=" + event.currentTarget.dataset.id,
+    })
   },
 
 })
