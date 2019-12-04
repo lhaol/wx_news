@@ -9,7 +9,7 @@
 <view class="container"> 
   <!-- 新闻类型，值为gn、gj、cj、yl、js、ty和other其中之一 --> 
   <view class ="news-type">
-    <view class="type" wx:for="{{typeCN}}" bindtap=''>{{item}}</view>
+    <view class="type" wx:for="{{typeCN}}" bindtap='onTapType' data-type="{{item}}">{{item}}</view>
   </view>
 
   <!-- 新闻头图 -->

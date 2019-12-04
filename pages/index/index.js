@@ -14,7 +14,7 @@ Page({
     headImage: '',
     headSource: '',
     headTime: '',
-    type:'gn',
+    type:'国内'
   },
 
   onLoad() {
@@ -30,7 +30,7 @@ Page({
     wx.request({
       url: 'https://test-miniprogram.com/api/news/list',
       data: {
-        type: 'gn'
+        type: newsTypeMap[this.data.type]
       },
       success: res => {
         console.log(res)
@@ -44,7 +44,7 @@ Page({
       }
     })
   },
-
+  // 获取头部新闻的数据
   setHeadNews(result) {
     let headTitle = result[0].title
     let headImage = result[0].firstImage
@@ -57,7 +57,7 @@ Page({
       headTime: headTime,
     })
   },
-
+  // 获取新闻列表中的数据
   setListNews(result) {
     let listResults = []
     for(let i = 1; i<result.length; i += 1) {
@@ -72,13 +72,20 @@ Page({
       listResults: listResults
     })
   },
-
+  // 获取新闻类型
   setNewsType(){
     let typeCN = Object.keys(newsTypeMap)
-    let typeEN = Object.values(newsTypeMap)
+    // let typeEN = Object.values(newsTypeMap)
     this.setData({
       typeCN: typeCN,
-      typeEN: typeEN,
     })
-  }
+  },
+  //点击新闻类型并传递值
+  onTapType(event){
+    this.setData({
+      type: event.currentTarget.dataset.type
+    })
+    this.getNews()
+  },
+
 })
