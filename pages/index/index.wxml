@@ -9,13 +9,7 @@
 <view class="container"> 
   <!-- 新闻类型，值为gn、gj、cj、yl、js、ty和other其中之一 --> 
   <view class ="news-type">
-    <view class="type">国内</view>
-    <view class="type">国际</view>
-    <view class="type">财经</view>
-    <view class="type">娱乐</view>
-    <view class="type">军事</view>
-    <view class="type">体育</view>
-    <view class="type">其他</view>
+    <view class="type" wx:for="{{typeCN}}" bindtap=''>{{item}}</view>
   </view>
 
   <!-- 新闻头图 -->

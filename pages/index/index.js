@@ -1,3 +1,12 @@
+const newsTypeMap = {
+  '国内': 'gn',
+  '国际': 'gj',
+  '财经': 'cj',
+  '娱乐': 'yl',
+  '军事': 'js',
+  '体育': 'ty',
+  '其他': 'other'
+}
 
 Page({
   data: {
@@ -5,8 +14,9 @@ Page({
     headImage: '',
     headSource: '',
     headTime: '',
+    type:'gn',
   },
-  
+
   onLoad() {
     this.getNews()
   },
@@ -27,7 +37,7 @@ Page({
         let result = res.data.result
         this.setHeadNews(result)
         this.setListNews(result)
-        console.log(result.length)
+        this.setNewsType()
       },
       complete: () => {
         callback && callback()
@@ -63,4 +73,12 @@ Page({
     })
   },
 
+  setNewsType(){
+    let typeCN = Object.keys(newsTypeMap)
+    let typeEN = Object.values(newsTypeMap)
+    this.setData({
+      typeCN: typeCN,
+      typeEN: typeEN,
+    })
+  }
 })
