@@ -20,36 +20,32 @@
 
   <!-- 新闻头图 -->
   <view class="head-news">
-    <image class="head-news-bg" src="/images/xi.png" mode=""></image>
+    <image class="head-news-bg" src="{{headImage}}" mode=""></image>
     <!-- <view class="header-tips">热门</view> -->
-    <view class="head-news-attribute">
-      <view class="head-news-title">我是一个标题</view>
-      <view class="head-news-source">新华社</view>
-      <view class="head-news-time">12-09</view>
+    <view class="head-news-attr">
+      <view class="head-news-title">{{headTitle}}</view>
+      <view class="sub">
+        <view class="source">{{headSource}}</view>
+        <view class="time">{{headTime}}</view>
+      </view>
     </view>
   </view>
 
   <!--新闻列表-->
-  <view class="news-list">
-    <view class="list-items">
-      <view class="sub-attr">
-        <view class="sub-title">新闻111</view>
-        <view class="sub-source">新华社</view>
-        <view class="sub-time">04：09</view>
+  <scroll-view scroll-y>
+    <view class="news-list">
+      <view class="list-items" wx:for="{{listResults}}">
+        <view class="list-attr">
+          <view class="list-title">{{item.listTitle}}</view>
+          <view class="sub">
+            <view class="source">{{item.listSource}}</view>
+            <view class="time">{{item.listTime}}</view>
+          </view>
+        </view>
+        <image class="list-img" src="{{item.listImage}}"></image>
       </view>
-      <image class="sub-img" src="/images/xi.png"></image>
     </view>
-    <view class="list-items">新闻222</view>
-    <view class="list-items">新闻333</view>
-    <view class="list-items">新闻444</view>
-  </view>
+  </scroll-view>
 </view>
 
-
-
-
-<!-- 新闻内容列表 -->
-<view class="">
-
-</view>
 
