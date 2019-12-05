@@ -47,8 +47,8 @@
 
 .head-news-attr{
   position: absolute;
-  bottom: 16rpx;
-  left: 32rpx;
+  bottom: 20rpx;
+  left: 20rpx;
   padding:20rpx;
   font-size: 30rpx;
 }
@@ -60,8 +60,9 @@
 
 .head-news-title{
   font-size: 36rpx; 
-  color:  aliceblue;
-  font-style: normal;
+  color: aliceblue;
+  font-weight: bold;
+  background:rgba(0,0,0,0.5);
 }
 
 .sub{

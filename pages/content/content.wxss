@@ -1,26 +1,37 @@
-/* pages/content.wxss */
-.content-news-title {
-
+/* 设置Header样式 */
+.header{
+  padding: 20rpx;
+  width: auto;
+  height: auto;
 }
 
-.content-news-image {
-  width: 750rpx;
-}
-
-.content-news-source {
-  font-size: xx-small;
+.sub{
+  display: flex;
+  font-size: small;
   color: grey;
 }
 
+.content-news-title {
+  font-size: 48rpx; 
+  font-weight: bold;
+}
+
 .content-news-time {
-  font-size: xx-small;
+  padding-left: 20rpx;
 }
 
 .content-news-readCount {
-  font-size: xx-small;
+  font-size: small;
+  position: absolute;
+  right:50rpx;
+}
 
+/* 设置新闻内容的样式 */
+.content-news-image {
+  width: 100%;
 }
 
 .content-news-text {
-
+  padding: 20rpx;
+  width: auto;
 }
