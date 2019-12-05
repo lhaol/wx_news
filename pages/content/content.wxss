@@ -1,6 +1,6 @@
 /* 设置Header样式 */
 .header{
-  padding: 20rpx;
+  padding: 30rpx;
   width: auto;
   height: auto;
 }
@@ -32,6 +32,6 @@
 }
 
 .content-news-text {
-  padding: 20rpx;
+  padding: 30rpx;
   width: auto;
 }
