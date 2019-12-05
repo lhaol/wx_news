@@ -13,7 +13,7 @@
   </view>
 
   <!-- 新闻头图 -->
-  <view class="head-news" data-id='{{headId}}' bindtap='onTapDetail'>
+  <view class="head-news" bindtap='onTapDetail' data-id="{{headId}}">
     <image class="head-news-bg" src="{{headImage}}"></image>
     <!-- <view class="header-tips">热门</view> -->
     <view class="head-news-attr">
@@ -28,7 +28,7 @@
   <!--新闻列表-->
   <scroll-view scroll-y>
     <view class="news-list">
-      <view class="list-items" wx:for="{{listResults}}" data-id='{{item.listId}}' bindtap='onTapDetail'>
+      <view class="list-items" wx:for="{{listResults}}" data-id="{{item.listId}}" bindtap="onTapDetail">
         <view class="list-attr">
           <view class="list-title">{{item.listTitle}}</view>
           <view class="sub">

@@ -51,6 +51,7 @@ Page({
     let headSource = result[0].source
     let headTime = result[0].date.slice(11, 16) //截取返回时间字符串中的11-16的字符作为时间显示 HH:MM
     let headId = result[0].id
+    // console.log(result[0].id)
     this.setData({
       headTitle: headTitle,
       headImage: "https://" + headImage,
@@ -68,8 +69,9 @@ Page({
         listSource: result[i].source ,
         listTime: result[i].date.slice(11,16),//截取返回时间字符串中的11-16的字符作为时间显示 HH:MM
         listImage:"https://" + result[i].firstImage,
-        listID: result[i].id
+        listId: result[i].id
       })
+      // console.log(listResults)
     }
     this.setData({
       listResults: listResults
@@ -93,9 +95,9 @@ Page({
   // 点击新闻跳转到Detail页面
   onTapDetail(event) {
     wx.navigateTo({
-      // url: "/pages/content/content"
       url: "/pages/content/content?id=" + event.currentTarget.dataset.id,
     })
+    // console.log(event.currentTarget.dataset.id)
   },
 
 })
