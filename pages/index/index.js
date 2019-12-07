@@ -54,7 +54,7 @@ Page({
     // console.log(result[0].id)
     this.setData({
       headTitle: headTitle,
-      headImage: "https://" + headImage,
+      headImage: headImage,
       headSource: headSource,
       headTime: headTime,
       headId: headId,
@@ -68,7 +68,7 @@ Page({
         listTitle: result[i].title,
         listSource: result[i].source ,
         listTime: result[i].date.slice(11,16),//截取返回时间字符串中的11-16的字符作为时间显示 HH:MM
-        listImage:"https://" + result[i].firstImage,
+        listImage: result[i].firstImage,
         listId: result[i].id
       })
       // console.log(listResults)
