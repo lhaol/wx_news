@@ -100,12 +100,14 @@
 }
 
 .list-img{
-  display: inline-block;
-  height: 90%;
-  width: auto;
-  vertical-align: right;
+  width: 200rpx;
+  max-height: 180rpx;
+  overflow: hidden;
   padding: 5rpx;
   opacity: 0.8;
+}
+.list-img .img {
+  width: 100%;
 }
 
 .list-title{

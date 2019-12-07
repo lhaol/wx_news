@@ -14,7 +14,9 @@
 
   <!-- 新闻头图 -->
   <view class="head-news" bindtap='onTapDetail' data-id="{{headId}}">
-    <image class="head-news-bg" src="{{headImage}}" mode="aspectFill"></image>
+    <view class="head-news-bg">
+      <image class="img" src="{{headImage}}" mode="widthFix"></image>
+    </view>
     <!-- <view class="header-tips">热门</view> -->
     <view class="head-news-attr">
       <view class="head-news-title">{{headTitle}}</view>
@@ -36,7 +38,9 @@
             <view class="time">{{item.listTime}}</view>
           </view>
         </view>
-        <image class="list-img" src="{{item.listImage}}" mode="aspectFill"></image>
+        <view class="list-img">
+          <image class="img" src="{{item.listImage}}" mode="widthFix"></image>
+        </view>
       </view>
     </view>
   </scroll-view>
