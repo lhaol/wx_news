@@ -48,7 +48,7 @@ Page({
   setHeadNews(result) {
     let headTitle = result[0].title
     //判断firstImage是否包含图片链接, 如果不包含则使用默认图片
-    let headImage = result[0].firstImage.length == 0 ? images/news.jpg : result[0].firstImage 
+    let headImage = result[0].firstImage.length == 0 ? "../../images/news.jpg" : result[0].firstImage 
     let headSource = result[0].source.length == 0 ? "快读资讯" : result[0].source
     let headTime = result[0].date.slice(11, 16) //截取返回时间字符串中的11-16的字符作为时间显示 HH:MM
     let headId = result[0].id
@@ -66,7 +66,7 @@ Page({
     let listResults = []
     for(let i = 1; i<result.length; i += 1) {
       //判断firstImage是否包含图片链接, 如果不包含则使用默认图片
-      let firstImage_url = result[i].firstImage.length == 0 ? images/news.jpg : result[i].firstImage
+      let firstImage_url = result[i].firstImage.length == 0 ? "../../images/news.jpg" : result[i].firstImage
       let source = result[i].source.length == 0 ? "快读资讯" : result[i].source
       listResults.push({
         listTitle: result[i].title,
