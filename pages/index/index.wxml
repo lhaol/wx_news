@@ -2,7 +2,7 @@
 <!-- 新闻页面头部 -->
 <view class ="page-title">
   <image class="title-img" src="/images/news.jpg"></image>
-  <view class="title-name">快读·咨询</view>
+  <view class="title-name">快读·资讯</view>
 </view>
 
 <!-- 新闻页面主体 -->
