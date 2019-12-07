@@ -10,7 +10,7 @@
 
 <!--Text-->
 <view class='content-news-text' wx:for="{{content}}" wx:key="key">
-  <image wx:if="{{item.type=='image'}}" src="{{item.src}}" class='content-news-image'/>
+  <image wx:if="{{item.type=='image'}}" src="{{item.src}}" mode= "aspectFit" class='content-news-image'/>
   <view wx:if="{{item.type=='p'}}">{{item.text}}</view>
   <text wx:if="{{item.type=='strong'}}" style="font-weight: bold">{{item.text}}</text>
 </view>
